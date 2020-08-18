@@ -9,6 +9,7 @@
         <!--Athletes-->
         <scene sceneID="iSC-uZ-QmI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwN-jq-TZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DuO-zo-ibn" customClass="AthleteVC" customModule="AthleteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pVD-jP-ZDr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -45,12 +46,18 @@
                             <outlet property="delegate" destination="DuO-zo-ibn" id="sce-jz-cux"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Athletes" id="VbV-lC-KWy"/>
+                    <navigationItem key="navigationItem" title="Athletes" id="VbV-lC-KWy">
+                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease.circle" catalog="system" id="iFF-CM-lQS">
+                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="btnFilterAction:" destination="DuO-zo-ibn" id="5hJ-e9-qWh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="athleteTableview" destination="pVD-jP-ZDr" id="mG1-2o-kGr"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pwN-jq-TZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="955" y="-177"/>
         </scene>
@@ -73,4 +80,7 @@
             <point key="canvasLocation" x="190" y="-177"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
